@@ -5,15 +5,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Hexo搭建免费个人博客 - Music Mo0d</title>
+    <title>Hexo建站备忘录 - Music Mo0d</title>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="kingfo,"> 
     <meta name="description" content="
+偶知此法，手握域名，遂弄之，待更待兴。
+
 本文适应于MacOS，原理过程通用
 
-Hexo原理：由于github pages存放的都是静态文件，博客存放的不只是文章内容，还有文章列表、分类、标签、翻页等动态内容，避免每次写完一篇文章都要手动,"> 
+
+Hexo原理：由于github pages存放的都是静态文件，博客存放的不只是文章内容，还有文章列表、分类、标签、,"> 
     <meta name="author" content="John Doe"> 
     <link rel="alternative" href="atom.xml" title="Music Mo0d" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -41,7 +44,7 @@ Hexo原理：由于github pages存放的都是静态文件，博客存放的不�
     <div class="bar" style="width: 0;"></div>
     <a class="iconfont icon-home image-icon" href="javascript:;" data-url="https://whyalwaysyou.github.io"></a>
     <div title="播放/暂停" class="iconfont icon-play"></div>
-    <h3 class="subtitle">Hexo搭建免费个人博客</h3>
+    <h3 class="subtitle">Hexo建站备忘录</h3>
     <div class="social">
         <div>
             <div class="share">
@@ -56,7 +59,7 @@ Hexo原理：由于github pages存放的都是静态文件，博客存放的不�
     <div class="section">
         <div class="article">
     <div class='main'>
-        <h1 class="title">Hexo搭建免费个人博客</h1>
+        <h1 class="title">Hexo建站备忘录</h1>
         <div class="stuff">
             <span>十二月 23, 2020</span>
             
@@ -64,28 +67,32 @@ Hexo原理：由于github pages存放的都是静态文件，博客存放的不�
         </div>
         <div class="content markdown">
             <blockquote>
+<p>偶知此法，手握域名，遂弄之，待更待兴。</p>
+<blockquote>
 <p>本文适应于MacOS，原理过程通用</p>
 </blockquote>
-<h1 id="Hexo原理："><a href="#Hexo原理：" class="headerlink" title="Hexo原理："></a>Hexo原理：</h1><p>由于github pages存放的都是静态文件，博客存放的不只是文章内容，还有文章列表、分类、标签、翻页等动态内容，避免每次写完一篇文章都要手动更新博文目录和相关链接信息，hexo所做的就是将这些md文件都放在本地，每次写完文章后调用写好的命令来批量完成相关页面的生成，然后再将有改动的页面提交到github。</p>
-<h1 id="平台选择："><a href="#平台选择：" class="headerlink" title="平台选择："></a>平台选择：</h1><p>Github<br>Gitee       –国内，但不能自定义域名，舍弃<br>Gitlob</p>
-<h1 id="主要步骤："><a href="#主要步骤：" class="headerlink" title="主要步骤："></a>主要步骤：</h1><h2 id="1-准备工作"><a href="#1-准备工作" class="headerlink" title="1.  准备工作"></a>1.  准备工作</h2><p>  a. Github 账号，仓库，Pages,SSH<br>  b. 系统环境准备： node.js,npm,cnpm,git<br>      <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name xx</span><br><span class="line">git config --global user.email &quot;xx@xx&quot;</span><br><span class="line">ssh-keygen -t rsa -C &quot;xx@xx&quot;</span><br><span class="line">sudo npm install -g cnpm --registry&#x3D;https:&#x2F;&#x2F;registry.npm.taobao.org --verbose</span><br><span class="line">cnpm install -g hexo-cli</span><br></pre></td></tr></table></figure></p>
-<h2 id="2-初始化安装及部署"><a href="#2-初始化安装及部署" class="headerlink" title="2.  初始化安装及部署"></a>2.  初始化安装及部署</h2><p><em>npm install -g hexo</em><br><em>cd xxxxxxx</em><br><em>hexo init</em><br><em>hexo -h</em></p>
-<h2 id="3-主题"><a href="#3-主题" class="headerlink" title="3. 主题"></a>3. 主题</h2><pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;Fechin&#x2F;hexo-theme-diaspora.git themes&#x2F;diaspora</span><br><span class="line">hexo new page tags</span><br><span class="line">hexo new page categories</span><br><span class="line">hexo new page tags</span><br><span class="line">cnpm install hexo-generator-searchdb --save</span><br><span class="line">hexo new page search</span><br></pre></td></tr></table></figure></code></pre>
-<h2 id="4-域名"><a href="#4-域名" class="headerlink" title="4. 域名"></a>4. 域名</h2><ul>
+</blockquote>
+<h3 id="Hexo原理："><a href="#Hexo原理：" class="headerlink" title="Hexo原理："></a>Hexo原理：</h3><p>由于github pages存放的都是静态文件，博客存放的不只是文章内容，还有文章列表、分类、标签、翻页等动态内容，避免每次写完一篇文章都要手动更新博文目录和相关链接信息，hexo所做的就是将这些md文件都放在本地，每次写完文章后调用写好的命令来批量完成相关页面的生成，然后再将有改动的页面提交到github。</p>
+<h3 id="平台选择："><a href="#平台选择：" class="headerlink" title="平台选择："></a>平台选择：</h3><p>Github<br>Gitee       –国内，但不能自定义域名，舍弃<br>Gitlob</p>
+<h3 id="主要步骤："><a href="#主要步骤：" class="headerlink" title="主要步骤："></a>主要步骤：</h3><h5 id="1-准备工作"><a href="#1-准备工作" class="headerlink" title="1.  准备工作"></a>1.  准备工作</h5><p>  a. Github 账号，仓库，Pages,SSH<br>  b. 系统环境准备： node.js,npm,cnpm,git<br>      <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name xx</span><br><span class="line">git config --global user.email &quot;xx@xx&quot;</span><br><span class="line">ssh-keygen -t rsa -C &quot;xx@xx&quot;</span><br><span class="line">sudo npm install -g cnpm --registry&#x3D;https:&#x2F;&#x2F;registry.npm.taobao.org --verbose</span><br><span class="line">cnpm install -g hexo-cli</span><br></pre></td></tr></table></figure></p>
+<h5 id="2-初始化安装及部署"><a href="#2-初始化安装及部署" class="headerlink" title="2.  初始化安装及部署"></a>2.  初始化安装及部署</h5><p><em>npm install -g hexo</em><br><em>cd xxxxxxx</em><br><em>hexo init</em><br><em>hexo -h</em></p>
+<h5 id="3-主题"><a href="#3-主题" class="headerlink" title="3. 主题"></a>3. 主题</h5><pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;Fechin&#x2F;hexo-theme-diaspora.git themes&#x2F;diaspora</span><br><span class="line">hexo new page tags</span><br><span class="line">hexo new page categories</span><br><span class="line">hexo new page tags</span><br><span class="line">cnpm install hexo-generator-searchdb --save</span><br><span class="line">hexo new page search</span><br></pre></td></tr></table></figure></code></pre>
+<h5 id="4-域名"><a href="#4-域名" class="headerlink" title="4. 域名"></a>4. 域名</h5><ul>
 <li>GitHub 绑定</li>
 <li>resource CNAME 添加</li>
 <li>域名服务器维护 CNAME记录</li>
 </ul>
-<h2 id="5-其他"><a href="#5-其他" class="headerlink" title="5.其他"></a>5.其他</h2><h1 id="注意事项："><a href="#注意事项：" class="headerlink" title="注意事项："></a>注意事项：</h1><ol>
+<h5 id="5-其他"><a href="#5-其他" class="headerlink" title="5.其他"></a>5.其他</h5><h3 id="注意事项："><a href="#注意事项：" class="headerlink" title="注意事项："></a>注意事项：</h3><ol>
 <li>Rename repository to xxx.github.io, xxx is your Account name.</li>
 <li></li>
 </ol>
-<h1 id="优化与技巧："><a href="#优化与技巧：" class="headerlink" title="优化与技巧："></a>优化与技巧：</h1><ol>
+<h3 id="优化与技巧："><a href="#优化与技巧：" class="headerlink" title="优化与技巧："></a>优化与技巧：</h3><ol>
 <li>主题</li>
 <li>背景图片，Icon，座右铭</li>
-<li>…</li>
+<li>搜索</li>
+<li>目录，landscape</li>
 </ol>
-<h1 id="相关维护软件："><a href="#相关维护软件：" class="headerlink" title="相关维护软件："></a>相关维护软件：</h1><ul>
+<h3 id="相关维护软件："><a href="#相关维护软件：" class="headerlink" title="相关维护软件："></a>相关维护软件：</h3><ul>
 <li>图片压缩，Ipic，cloudapp  </li>
 <li>Markdown： Macdown，Mou</li>
 <li>Github desktop</li>
