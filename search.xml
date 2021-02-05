@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Hexo建站备忘录</title>
+    <url>/2020/12/23/Hexo%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<blockquote>
+<p>偶知此法，手握域名，遂弄之，待更待兴。</p>
+<blockquote>
+<p>本文适应于MacOS，原理过程通用</p>
+</blockquote>
+</blockquote>
+<h3 id="Hexo原理："><a href="#Hexo原理：" class="headerlink" title="Hexo原理："></a>Hexo原理：</h3><p>由于github pages存放的都是静态文件，博客存放的不只是文章内容，还有文章列表、分类、标签、翻页等动态内容，避免每次写完一篇文章都要手动更新博文目录和相关链接信息，hexo所做的就是将这些md文件都放在本地，每次写完文章后调用写好的命令来批量完成相关页面的生成，然后再将有改动的页面提交到github。</p>
+<h3 id="平台选择："><a href="#平台选择：" class="headerlink" title="平台选择："></a>平台选择：</h3><p>Github<br>Gitee       –国内，但不能自定义域名，舍弃<br>Gitlob</p>
+<h3 id="主要步骤："><a href="#主要步骤：" class="headerlink" title="主要步骤："></a>主要步骤：</h3><h5 id="1-准备工作"><a href="#1-准备工作" class="headerlink" title="1.  准备工作"></a>1.  准备工作</h5><p>  a. Github 账号，仓库，Pages,SSH<br>  b. 系统环境准备： node.js,npm,cnpm,git<br>      <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git config --global user.name xx</span><br><span class="line">git config --global user.email &quot;xx@xx&quot;</span><br><span class="line">ssh-keygen -t rsa -C &quot;xx@xx&quot;</span><br><span class="line">sudo npm install -g cnpm --registry&#x3D;https:&#x2F;&#x2F;registry.npm.taobao.org --verbose</span><br><span class="line">cnpm install -g hexo-cli</span><br></pre></td></tr></table></figure></p>
+<h5 id="2-初始化安装及部署"><a href="#2-初始化安装及部署" class="headerlink" title="2.  初始化安装及部署"></a>2.  初始化安装及部署</h5><p><em>npm install -g hexo</em><br><em>cd xxxxxxx</em><br><em>hexo init</em><br><em>hexo -h</em></p>
+<h5 id="3-主题"><a href="#3-主题" class="headerlink" title="3. 主题"></a>3. 主题</h5><pre><code><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;Fechin&#x2F;hexo-theme-diaspora.git themes&#x2F;diaspora</span><br><span class="line">hexo new page tags</span><br><span class="line">hexo new page categories</span><br><span class="line">hexo new page tags</span><br><span class="line">cnpm install hexo-generator-searchdb --save</span><br><span class="line">hexo new page search</span><br></pre></td></tr></table></figure></code></pre>
+<h5 id="4-域名"><a href="#4-域名" class="headerlink" title="4. 域名"></a>4. 域名</h5><ul>
+<li>GitHub 绑定</li>
+<li>resource CNAME 添加</li>
+<li>域名服务器维护 CNAME记录</li>
+</ul>
+<h5 id="5-其他"><a href="#5-其他" class="headerlink" title="5.其他"></a>5.其他</h5><h3 id="注意事项："><a href="#注意事项：" class="headerlink" title="注意事项："></a>注意事项：</h3><ol>
+<li>Rename repository to xxx.github.io, xxx is your Account name.</li>
+<li></li>
+</ol>
+<h3 id="优化与技巧："><a href="#优化与技巧：" class="headerlink" title="优化与技巧："></a>优化与技巧：</h3><ol>
+<li>主题</li>
+</ol>
+<ul>
+<li>Install<br>$ git clone <a href="https://github.com/Fechin/hexo-theme-diaspora.git">https://github.com/Fechin/hexo-theme-diaspora.git</a> themes/diaspora</li>
+<li>Enable<br>_config.yml</li>
+<li>Update<br>  cd themes/diaspora<br>  git pull</li>
+<li>新建文章模板</li>
+<li>search<blockquote>
+<p>npm install hexo-generator-searchdb –save</p>
+<blockquote>
+<p>search:<br>path: search.xml<br>field: post<br>format: html<br>limit: 10000<br>本地搜索,请将索引文件放在网站根目录<br>local_search:<br>是否启用<br>enable: true</p>
+</blockquote>
+</blockquote>
+</li>
+</ul>
+<ul>
+<li>网站图标<br>favicon.ico</li>
+</ul>
+<ol start="2">
+<li>背景图片，Icon，座右铭</li>
+<li>搜索</li>
+<li>目录，landscape</li>
+<li>网站统计（baidu，google）</li>
+<li>社交，好友，评论系统</li>
+</ol>
+<h3 id="相关维护软件："><a href="#相关维护软件：" class="headerlink" title="相关维护软件："></a>相关维护软件：</h3><ul>
+<li>图片压缩，Ipic，cloudapp,ImageOptim  </li>
+<li>Markdown： Macdown，Mou</li>
+<li>Github desktop</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>Tech</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Music Mo0d</title>
+    <url>/2020/12/22/Music-Mo0d/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/12/22/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="http://kingfo.top/">Mucic Mo0d</a>!</p>
+<p><strong><em>This is a very pure world!</em></strong></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/12/22/hello-world%E7%9A%84%E5%89%AF%E6%9C%AC%202/</url>
+    <content><![CDATA[<p>Welcome to <a href="http://kingfo.top/">Mucic Mo0d</a>!</p>
+<p><strong><em>This is a very pure world!</em></strong></p>
+]]></content>
+      <tags>
+        <tag>test</tag>
+        <tag>Kingfo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/12/22/hello-world%E7%9A%84%E5%89%AF%E6%9C%AC%203/</url>
+    <content><![CDATA[<p>Welcome to <a href="http://kingfo.top/">Mucic Mo0d</a>!</p>
+<p><strong><em>This is a very pure world!</em></strong></p>
+]]></content>
+      <tags>
+        <tag>Kingfo</tag>
+        <tag>life</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/12/22/hello-world%E7%9A%84%E5%89%AF%E6%9C%AC%204/</url>
+    <content><![CDATA[<p>Welcome to <a href="http://kingfo.top/">Mucic Mo0d</a>!</p>
+<p><strong><em>This is a very pure world!</em></strong></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/12/22/hello-world%E7%9A%84%E5%89%AF%E6%9C%AC%205/</url>
+    <content><![CDATA[<p>Welcome to <a href="http://kingfo.top/">Mucic Mo0d</a>!</p>
+<p><strong><em>This is a very pure world!</em></strong></p>
+]]></content>
+      <tags>
+        <tag>life</tag>
+        <tag>tea</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/12/22/hello-world%E7%9A%84%E5%89%AF%E6%9C%AC/</url>
+    <content><![CDATA[<p>Welcome to <a href="http://kingfo.top/">Mucic Mo0d</a>!</p>
+<p><strong><em>This is a very pure world!</em></strong></p>
+]]></content>
+  </entry>
+</search>
